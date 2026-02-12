@@ -1,3 +1,7 @@
 /build/
 build/
 
+
+copy_docs/
+
+.vscode/
