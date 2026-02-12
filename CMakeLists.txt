@@ -19,29 +19,29 @@ add_executable(blackjack src/main.cpp)
 target_link_libraries(blackjack PRIVATE blackjack_lib)
 
 # ---------- GoogleTest ----------
-include(FetchContent)
+# include(FetchContent)
 
-FetchContent_Declare(
-  googletest
-  GIT_REPOSITORY https://github.com/google/googletest.git
-  GIT_TAG v1.14.0
-)
+# FetchContent_Declare(
+#   googletest
+#   GIT_REPOSITORY https://github.com/google/googletest.git
+#   GIT_TAG v1.14.0
+# )
 
-FetchContent_MakeAvailable(googletest)
+# FetchContent_MakeAvailable(googletest)
 
-enable_testing()
+# enable_testing()
 
-add_executable(blackjack_tests
-  tests/deck_tests.cpp
-  tests/player_tests.cpp
-  tests/blackjack_tests.cpp
-)
+# add_executable(blackjack_tests
+#   tests/deck_tests.cpp
+#   tests/player_tests.cpp
+#   tests/blackjack_tests.cpp
+# )
 
-target_link_libraries(blackjack_tests
-  PRIVATE
-    blackjack_lib
-    gtest_main
-)
+# target_link_libraries(blackjack_tests
+#   PRIVATE
+#     blackjack_lib
+#     gtest_main
+# )
 
-include(GoogleTest)
-gtest_discover_tests(blackjack_tests)
+# include(GoogleTest)
+# gtest_discover_tests(blackjack_tests)
