@@ -144,7 +144,7 @@ void Blackjack::playRound() {
     // Check if player has a natural.
     if (player.getHandValue() == 21) {
         player.showHand();
-        std::cout << "Player have a Natural.\n";
+        std::cout << "Player has a Natural.\n";
         player.setHasNatural(true);
     } else {
         player.showHand();
@@ -155,7 +155,7 @@ void Blackjack::playRound() {
 
     // Check if dealer has a natural.
     if (dealer.getHandValue() == 21) {
-        std::cout << "Dealer have a Natural.\n";
+        std::cout << "Dealer has a Natural.\n";
         dealer.showHand();
         dealer.setHasNatural(true);
         // If dealer has not a natural and player has a natural.
@@ -187,4 +187,6 @@ void Blackjack::playRound() {
 
     player.resetHand();
     dealer.resetHand();
+    player.setHasNatural(false);
+    dealer.setHasNatural(false);
 }
