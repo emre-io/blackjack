@@ -1,2 +1,11 @@
 # Blackjack
-To build the project use `cmake --build build`. Play blackjack with `.build/blackjack`. 
+
+## Installation
+To build the project execute following script in the project root.
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build .
+```
+After execution the commands above and switching to project root, you can play blackjack with `.build/blackjack`. 
